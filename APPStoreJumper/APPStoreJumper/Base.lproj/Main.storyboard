@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RvW-CC-pA5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--跳转 APPStore-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOh-0B-gd3">
+                                <rect key="frame" x="87.5" y="283" width="200" height="100"/>
+                                <color key="backgroundColor" cyan="1" magenta="0.00017728656530380249" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IvN-mq-2XT"/>
+                                    <constraint firstAttribute="width" constant="200" id="QYQ-fO-cPm"/>
+                                </constraints>
+                                <state key="normal" title="JumpToAppStore">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="jumpToAppStore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="84d-KH-9zk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="414478124" borderStyle="roundedRect" placeholder="Maybe u need an id" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MnJ-D4-fL5">
+                                <rect key="frame" x="20" y="94" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-tH-P7D">
+                                <rect key="frame" x="87" y="403" width="201" height="29"/>
+                                <segments>
+                                    <segment title="跳转"/>
+                                    <segment title="应用内"/>
+                                </segments>
+                                <color key="tintColor" cyan="1" magenta="0.00017728656530380249" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cqh-tH-P7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="5d5-Kc-QVJ"/>
+                            <constraint firstItem="AOh-0B-gd3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FdQ-Si-PkL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MnJ-D4-fL5" secondAttribute="trailing" constant="20" id="HKj-bx-wr7"/>
+                            <constraint firstItem="MnJ-D4-fL5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gQd-JK-neb"/>
+                            <constraint firstItem="MnJ-D4-fL5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h85-Ua-h0F"/>
+                            <constraint firstItem="AOh-0B-gd3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ixp-aF-Oxs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cqh-tH-P7D" secondAttribute="trailing" constant="87" id="l0r-Xx-waa"/>
+                            <constraint firstItem="cqh-tH-P7D" firstAttribute="top" secondItem="AOh-0B-gd3" secondAttribute="bottom" constant="20" id="snV-Vq-BFI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="跳转 APPStore" id="6dM-a6-96Y"/>
+                    <connections>
+                        <outlet property="field" destination="MnJ-D4-fL5" id="xcm-Ol-AFS"/>
+                        <outlet property="seg" destination="cqh-tH-P7D" id="TwP-LL-eZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GGu-rL-fh1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RvW-CC-pA5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AhT-dQ-bXm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0MS-ap-eDu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2aU-8T-whU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384.80000000000001" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+</document>
